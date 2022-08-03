@@ -24,7 +24,8 @@ navigator.getBattery().then((battery) => {
 });
 
 function refreshTime() {
-  timeDisplay.innerHTML = new Date().toLocaleString('hr');
+  timeDisplay.innerHTML = new Date().toLocaleString('hr').slice(13, 19);
 }
+refreshTime();
 
 setInterval(refreshTime, 1000);
